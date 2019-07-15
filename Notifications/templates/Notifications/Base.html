@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+     <!-- Meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+     <!-- Link tags -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="{% static 'Notifications/CSS/Base.css' %}" />
+     <link rel="shortcut icon" href="{% static 'Notifications/Images/GuildLogoIcon.png' %}" type="image/png" />
+
+     <!-- Head block to allow for the addition of CSS, title, etc -->
+     {% block Head %}
+     {% endblock %}
+
+   </head>
+
+   <body>
+
+     <nav class="navbar fixed-top navbar-white bg-white">
+
+       <div class="mx-auto dropdown DropDownButtonCentered">
+         <button class="InvisibleButton "data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+           <div class="DropDownBlock1">
+
+           </div>
+
+           <div class="DropDownBlock2">
+
+           </div>
+
+           <div class="DropDownBlock2">
+
+           </div>
+
+         </button>
+
+         <div class="dropdown-menu DropDownMenuCentered text-center" aria-labelledby="dropdownMenuButton">
+
+           <img src="{% static 'UserProfiles/Images/GuildLogoIcon.png' %}" style="width: 2rem; height: 2rem; margin-bottom: 0.3rem;">
+
+           <a class="dropdown-item" href="{% url 'Home:Feed' %}">Home</a>
+
+           <a class="dropdown-item" href="{% url 'NotificationsApp:Notifications' %}" style="background-color: red; color: white;">Notifications</a>
+
+           <a class="dropdown-item" href="{% url 'GuildChat:GroupChat' %}">GroupChat</a>
+
+           <a class="dropdown-item" href="{% url 'Discover:DiscoverPage' %}">Discover</a>
+
+           <a class="dropdown-item" href="{% url 'FullSearch:Search' %}">Search</a>
+
+           <a class="dropdown-item" href="{% url 'UserProfiles:UserProfile' Username=Username %}">Profile</a>
+
+           <a class="dropdown-item" href="{% url 'UserSettings:UserSettings' %}">Settings</a>
+
+
+         </div>
+
+       </div>
+
+     </nav>
+
+
+     {% block Content %}
+     {% endblock %}
+
+     <!-- Script tags used for Bootstrap -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   </body>
+
+</html>

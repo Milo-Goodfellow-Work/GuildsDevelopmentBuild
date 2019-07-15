@@ -1,0 +1,184 @@
+{% extends "Home/Base.html" %}
+{% load static %}
+
+{% block Head %}
+<link rel="stylesheet" type="text/css" href="{% static 'Home/CSS/Home.css' %}" />
+<title>Home!</title>
+{% endblock %}
+
+{% block Content %}
+
+  <div class="container" style="display: inline-block;">
+
+    <div class="row" style="">
+
+    <div class="col l3 m0 s0 hide-on-med-and-down" style="">
+
+      <div class="card white" style="max-width: 13em; max-height: 10em; position: relative; top: 0.5em; margin: auto; margin-bottom: 1em; right: 2.5em; margin-right: 1em; float: left;">
+        <div class="card-content">
+            <a href="{% url 'Discover:DiscoverPage' %}" style="color: black; text-align: center;">
+              <h5 style="position: relative; top: -1.3em;">Find new groups</h5>
+              <br/>
+              <h3 style="position: relative; top: -1.7em; color: #FF7723;" class="underline-hover"> Explore </h3>
+            </a>
+          </div>
+        </div>
+
+    </div>
+
+
+    <div class="col s12 m12 l6" style="overflow: hidden; padding: 0em;">
+      <div class="card white" style="width: auto; min-height: 9em; margin-bottom: 1em; position: relative; max-height: 15em; overflow: hidden;">
+        <div class="card-content" style="max-height: 15em; padding: 0em; overflow: hidden;">
+          <img src="../../MediaStorage/{{ UserProfile.UserProfileHeader }}" style="width: 60em; max-height: 10em; object-fit: cover;">
+          </img>
+
+          <div class="white" style=" min-height: 4em; position: relative; top: -4em; box-shadow: 0px -4px 5px -1px rgba(0,0,0,0.17); object-fit: cover;">
+
+            <img src="../../MediaStorage/{{ UserProfile.UserProfileImage }}" style="width: 6em; height: 6em; border-style: solid; border-width: 1px; border-color: black; float: left; position: relative; top: -4em; left: 1em; position: relative; object-fit: cover;" />
+            <br/>
+            <h6 style="float: left; font-weight: bold; position: relative; left: -4em; top: 1em; font-family: 'Noto Sans'; font-size: 18px;">
+              {{ UserName }}
+            </h6>
+            <br/>
+            <br/>
+            <h6 style="float: left; position: relative; font-family: 'Noto Sans'; font-size: 13px; color: grey; text-align: left; left: -5.9em;">
+              <a href="{% url 'UserProfiles:UserProfile' Username=UserName %}" style="font-family: 'Noto Sans'; color: grey;">
+                <i class=" material-icons" style="color: grey;">
+                  person
+                </i>
+                <span style="top: -0.4em; position: relative;">
+                  Go to your profile!
+                </span>
+              </a>
+            </h6>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="card white" style="width: auto; min-height: 9em; position: relative; max-height: 15em; overflow: hidden;">
+        <div class="card-content" style="max-height: 15em; padding: 0em; overflow: hidden;">
+          <img src="../../MediaStorage/{{ GuildProfile.GuildProfileHeader }}" style="width: 60em; max-height: 10em; position: relative; object-fit: cover;">
+          </img>
+          <div class="white" style=" min-height: 4em; position: relative; top: -4em; box-shadow: 0px -4px 5px -1px rgba(0,0,0,0.17);">
+            <img src="../../MediaStorage/{{ GuildProfile.GuildProfileImage }}" style="width: 6em; height: 6em; border-style: solid; border-width: 1px; border-color: black; float: left; position: relative; top: -4em; left: 1em; position: relative; object-fit: cover;" />
+            <br/>
+            <h6 style="float: left; font-weight: bold; position: relative; left: -4em; top: 1em; font-family: 'Noto Sans'; font-size: 18px;">
+              {{ GuildName }}
+            </h6>
+            <br/>
+            <br/>
+            <h6 style="float: left; position: relative; left: -5.7em; font-family: 'Noto Sans'; font-size: 13px; color: grey;">
+              <a href="{% url 'GuildProfiles:GuildProfile' Guildname=GuildName %}" style="font-family: 'Noto Sans'; color: grey;">
+                <i class="material-icons" style="color: grey;">
+                  group
+                </i>
+                <span style="top: -0.4em; position: relative;">
+                  Go to your guild profile!
+                </span>
+              </a>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col l3 m0 s0 hide-on-med-and-down" style="">
+
+      <div class="card white" style="width: 13em; max-height: 10em; display: inline-block; vertical-align: top; position: relative; margin: auto; top: 0.5em; margin-bottom: 1em; float: right; left: 2.5em;">
+        <div class="card-content">
+            <a href="{% url 'Discover:DiscoverPage' %}" style="color: black; text-align: center;">
+              <h5 style="position: relative; top: -1.3em;">Search all posts</h5>
+              <br/>
+              <h3 style="position: relative; top: -1.7em; color: #FF7723;" class="underline-hover"> Search </h3>
+            </a>
+          </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+    <div class="row" style="">
+      <div class="col s12 m12 l6 offset-l3" style="padding: 0;">
+      <div class="card white" style="width: 100%; min-height: 15em; margin-bottom: 1em; position: relative; margin: auto;">
+        <div class="card-content" style="box-shadow: none; height: 90%; width:100%; padding: 1em;">
+          <h4 style="font-weight: bold; font-family: 'Noto Sans'">Say something new!</h4>
+          <a href="" class="waves-effect waves-light btn-flat" style="font-family: 'Noto Sans'; color: #FF7723; font-weight: bold; box-shadow: none; min-width: 5em; min-height: 3em; font-size: 28px; top: 0.5em; padding-top: 0.5em; right: 0.3em;">
+            Post
+          </a>
+          <a href="{% url 'UserPosts:PostUser' %}" class="waves-effect waves-light btn-flat" style="font-family: 'Noto Sans'; color: #F42B03; font-weight: bold; box-shadow: none; min-width: 5em; min-height: 3em; font-size: 28px; top: 0.5em; padding-top: 0.5em; right: 0.3em;">
+            Journal
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col s12 m12 l6 offset-l3">
+
+
+          {% for i in Details reversed %}
+
+
+
+          <div class="card horizontal" style="height: 15em; max-width: 40em; margin: auto; margin-top: 1em; overflow: hidden;">
+            <div class="card-image">
+              <a href="{% url 'GuildProfiles:GuildProfile' Guildname=i.1 %}"><img src="../../../MediaStorage/{{ i.0 }}" style="width: 15em; height: 15em; border-width: 1px; border-style: solid; border-color: black; object-fit: cover;"></a>
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <a href="{% url 'GuildProfiles:GuildProfile' Guildname=i.1 %}"><span class="card-title" style="float: left; font-weight: bold; font-family: 'Noto Sans'; font-size: 35px; color: black;">{{ i.1|truncatechars:10   }}<h6 style="float: right;">{{ i.2 }}</h6></span></a>
+
+
+
+
+                <div style="float: left; bottom: 1em; position: relative;">
+
+                  <span>Members:</span>
+
+                  {% for t in i.6 %}
+                    <img src="../../..{{ t.UserProfileImage.url }}" style="width: 30px; height: 30px; position: relative; border-width: 1px; border-color: grey; border-style: solid; object-fit: cover; margin-left: 1em; top: 0.6em;" />
+                  {% endfor %}
+
+
+                </div>
+
+                <br/>
+                <br/>
+                <br/>
+
+                <p style="float: left; position: relative; max-width: 20em; max-height: 3em; height: 3em; width: 20em; word-wrap: break-word; text-align: left; font-size: 15px;">{{ i.3|truncatechars:111 }}</p>
+
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
+                <a href="{% url 'GuildPosts:GuildReply' PostLink=i.4  %}" style="position: relative; float: left;">
+                  <i class=" material-icons" style="color: black;">
+                    reply
+                  </i>
+                </a>
+
+                <a href="{% url 'GuildPosts:Like' PostLink=i.4  %}" style="position: relative; float: left; padding-left: 1em;">
+                  <i class=" material-icons" style="color: black;">
+                    favorite
+                  </i>
+                  <p style="position: relative; left: 1.5em; top: -2em; color: black; font-family: 'Noto Sans';">{{ i.5 }}</p>
+                </a>
+
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+    </div>
+  </div>
+
+
+{% endblock %}

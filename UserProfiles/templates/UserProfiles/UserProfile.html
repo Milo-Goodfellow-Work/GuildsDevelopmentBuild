@@ -1,0 +1,107 @@
+{% extends "UserProfiles/Base.html" %}
+{% load static %}
+
+
+{% block Head %}
+<link rel="stylesheet" type="text/css" href="{% static 'UserProfiles/CSS/UserProfile.css' %}" />
+<title>{{ ProfileInformation.0 }}'s profile!</title>
+{% endblock %}
+
+{% block Content %}
+<img src="../../..{{ ProfileInformation.4 }}" class="responsive-img" style="width: 100%; max-height: 30em; object-fit: cover;"/>
+
+
+<div class="container" style="position: relative; top: -15em;">
+  <div class="row">
+    <div class="col s12 m12 l8 offset-l2" style="padding: 0.5em;">
+      <div class="card white" style="margin: auto; position: relative; max-width: 25em; min-height: 45em;">
+
+        <img src="../../..{{ ProfileInformation.3 }}" class="materialboxed" style="width: 15em; height: 15em; position: relative; top: 1.5em; object-fit: cover; margin: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.4);"/>
+
+        <div class="card-title">
+
+          <h4 style="position: relative; top: 0.5em;">{{ ProfileInformation.0 }}</h4>
+
+        </div>
+
+        <div class="card-content">
+
+          <p style="width: 12em; height: 5em; margin: auto; word-wrap: break-word;">
+            {{ ProfileInformation.1 }}
+          </p>
+
+          <b style="position: relative; top:4em;">
+            Member of:
+          </b>
+
+
+          <img src="../../..{{ ProfileInformation.6.GuildProfileImage.url }}" class="materialboxed" style="width: 5em; height: 5em; position: relative; top: 4.5em; object-fit: cover; margin: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.4); border-width: 1px; border-style: solid; border-color: black;"/>
+          <a href="{% url 'GuildProfiles:GuildProfile' Guildname=ProfileInformation.5.GuildName %}">
+            <b style="position: relative; top: 5.5em; color: #FF7723;">
+              {{ ProfileInformation.5.GuildName }}
+            </b>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m12 l8 offset-l2" style="padding: 0.5em;">
+      <div class="card white" style="margin: auto; position: relative; max-width: 35em; min-height: 5em;">
+
+        <div class="card-title">
+
+          <h4 style="position: relative; top: 0.5em;">Diary Entries</h4>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m12 l8 offset-l2" style="padding: 0.5em;">
+      {% for i in UserPosts %}
+      <div class="card white" style="margin: auto; position: relative; max-width: 35em; max-height: 20em; margin-top: 3em;">
+
+        <div class="card-title">
+
+          <h4 style="position: relative; top: 0.5em;">{{ ProfileInformation.0 }}</h4>
+
+        </div>
+
+        <div class="card-content" style="">
+
+          <p style="max-width: 20em; height: 5em; word-wrap: break-word; margin: auto;">
+            {{ i.PostBody }}
+          </p>
+
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.materialboxed');
+  var instances = M.Materialbox.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.materialboxed').materialbox();
+});
+
+</script>
+
+{% endblock %}

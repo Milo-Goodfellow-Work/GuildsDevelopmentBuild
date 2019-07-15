@@ -1,0 +1,63 @@
+{% extends "GuildProfiles/Base.html" %}
+{% load static %}
+
+
+{% block Head %}
+<link rel="stylesheet" type="text/css" href="{% static 'GuildProfiles/CSS/GuildProfile.css' %}" />
+<title>{{ ProfileInformation.0 }}'s profile!</title>
+{% endblock %}
+
+{% block Content %}
+<a name="top"></a>
+
+<img class="img-fluid" src="../../..{{ ProfileInformation.3 }}" id="ProfileInformationContainer" />
+
+</div>
+
+<div class="card mx-auto w-25 h-25" id="ProfileInformationCard">
+  <img class="card-img-top m-3 mx-auto" src="../../..{{ ProfileInformation.2 }}" id="ProfileImage">
+  <div class="card-body mx-auto text-center" style="word-break: break-all;">
+    <div class="card-block">
+    <h1 class="card-title"> <a href="" style="color: dimgrey;">{{ ProfileInformation.0 }}</a> </h1>
+    <hr>
+    <p class="card-text">{{ ProfileInformation.1 }}</p>
+    <ul class="list-group list-group-flush">
+      {% if ProfileInformation.4 != None %}
+      <li class="list-group-item"><a class="card-link" href="UserProfiles/{{ ProfileInformation.4 }}">Guild member 1: <br/>{{ ProfileInformation.4 }}</a></li>
+      {% endif %}
+      {% if ProfileInformation.5 != None %}
+      <li class="list-group-item"><a class="card-link" href="../UserProfiles/{{ ProfileInformation.5 }}">Guild member 2: <br/>{{ ProfileInformation.5 }}</a></li>
+      {% endif %}
+      {% if ProfileInformation.6 != None %}
+      <li class="list-group-item"><a class="card-link" href="../UserProfiles/{{ ProfileInformation.6 }}">Guild member 3: <br/>{{ ProfileInformation.6 }}</a></li>
+      {% endif %}
+      {% if ProfileInformation.7 != None %}
+      <li class="list-group-item"><a class="card-link" href="../UserProfiles/{{ ProfileInformation.7 }}">Guild member 4: <br/>{{ ProfileInformation.7 }}</a></li>
+      {% endif %}
+      {% if ProfileInformation.8 != None %}
+      <li class="list-group-item"><a class="card-link" href="../UserProfiles/{{ ProfileInformation.8 }}">Guild member 5: <br/>{{ ProfileInformation.8 }}</a></li>
+      {% endif %}
+      <li class="list-group-item"><a class="card-link" href="{% url 'Follow:FollowGuild' GuildName=ProfileInformation.0 %}">Follow</a></li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<div class="PostContainer mx-auto">
+  {% for i in UserPosts %}
+  <div class="card mx-auto m-5" style="">
+    <div class="card-body text-center">
+      <p class="card-text"> <h2>Post by: {{ ProfileInformation.0 }}</h2> <br/> {{ i.PostBody }} <br/> <h4 style="color: grey; padding-top: 1rem;">Posted on: {{ i.PostDate }}</h4></p>
+    </div>
+  </div>
+  {% endfor %}
+  <div class="card mx-auto m-3">
+    <div class="card-body text-center">
+      <p class="card-text">This is the end of {{ ProfileInformation.0 }}'s posts!</p>
+      <small style="color: grey;"><a href="#top">Return to top?</a></small>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

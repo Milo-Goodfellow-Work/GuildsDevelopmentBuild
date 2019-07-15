@@ -1,0 +1,40 @@
+
+{% extends "UserEntry/Base.html" %}
+
+{% load static %}
+
+{% block Head %}
+
+<link rel="shortcut icon" href="{% static 'UserEntry/Images/GuildLogoIcon.png' %}" type="image/png" />
+<link rel="stylesheet" type="text/css" href="{% static 'UserEntry/CSS/Register.css' %}" />
+<title>Guilds, the social network where groups connect!</title>
+
+{% endblock %}
+
+{% block Content %}
+
+<div class="card w-25 mx-auto m-5" id="RegisterContainer">
+  <div class="card-body text-center">
+    <img class="img-fluid w-50" src="{% static 'UserEntry/Images/GuildLogoWithText.png' %}" />
+    <h5 class="card-title m-3" style="color: grey;"><b>Guilds, the social network where groups connect!</b></h5>
+    <hr/>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        {% for field in form %}
+        <p>
+          <b>{{ field.label_tag }}</b><br>
+          {{ field }}
+        </p>
+        {% endfor %}
+      </div>
+      <button type="submit" class="btn btn-primary m-3">Join</button> <br>
+
+
+      <a href="{% url 'UserEntry:Login' %}">Already have an account? Login!</a>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

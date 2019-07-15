@@ -1,0 +1,29 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+{% block Head %}
+
+<link rel="shortcut icon" href="{% static 'Images/GuildLogoIcon.png' %}" type="image/png" />
+<link rel="stylesheet" type="text/css" href="{% static 'CSS/Error500.css' %}" />
+<title>Error 500, internal server error!</title>
+
+{% endblock %}
+
+{% block Content %}
+
+<div class="card w-25 mx-auto m-5" id="ErrorContainer">
+  <div class="card-body text-center">
+      <h1>Error 500</h1>
+      <hr />
+      <h2>Our servers are having an issue processing your request</h2>
+      <hr>
+      <h4 style="color: grey">Our bad!</h4>
+
+      <a href="#" class="btn btn-success m-3">Home</a> <br>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

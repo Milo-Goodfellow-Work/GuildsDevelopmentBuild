@@ -1,0 +1,94 @@
+label[for="id_GuildProfileImage"] {
+  background-color: #f7f7f7;
+  border-color: #e8e8e8;
+  border-width: 0.2rem;
+  border-style: dashed;
+  border-radius: 0.1rem;
+  width: 15rem;
+  height: 6.5rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+label[for="id_GuildProfileImage"]:hover {
+  cursor: pointer;
+  border-style: solid;
+
+}
+
+label[for="id_GuildProfileHeader"] {
+  background-color: #f7f7f7;
+  border-color: #e8e8e8;
+  border-width: 0.2rem;
+  border-radius: 0.1rem;
+  border-style: dashed;
+  width: 15rem;
+  height: 6.5rem;
+  padding-top: 1rem;
+
+}
+
+label[for="id_GuildProfileHeader"]:hover {
+  cursor: pointer;
+  border-style: solid;
+
+}
+
+#id_GuildProfileImage {
+  opacity: 0;
+  position: static;
+  z-index: -1;
+
+}
+
+
+
+#id_GuildProfileHeader {
+  opacity: 0;
+  position: static;
+  z-index: -1;
+
+}
+
+#DescriptionContainer {
+  min-width: 18rem;
+  overflow: hidden;
+
+}
+
+TextArea {
+  width: 14rem;
+  height: 10rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  border: 0.1rem solid #e8e8e8;
+  border-radius: 0.1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  resize: none;
+
+}
+
+input {
+  width: 14rem;
+  background-color: #f7f7f7;
+  border: 0.1rem solid #e8e8e8;
+  border-radius: 0.1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+
+}
+
+input:focus {
+    border: 0.1rem solid #cccccc;
+
+}
+
+body {
+    background: url('../Images/ProfileUpdate.jpg') no-repeat center fixed;
+    background-size: cover;
+
+}

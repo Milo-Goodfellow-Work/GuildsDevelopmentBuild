@@ -1,0 +1,20 @@
+This app handles:
+	- Guild creation page:
+		-Models for guild
+		-Models for guild members
+		-Form to join 
+		-Guild Size
+		-Guild Name
+		-Join guild created
+		-Leave current Guild
+
+	- Join Guild page:
+		-Join guild 
+		-Leave current guild
+		-Display new guild profile
+
+	- Create a ton of bloat for the app:
+		- All of everything 
+
+IT HANDLES NOTHING ELSE.
+

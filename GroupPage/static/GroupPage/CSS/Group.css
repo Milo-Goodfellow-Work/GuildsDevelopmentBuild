@@ -1,0 +1,309 @@
+.JoinGuild {
+	background:
+	linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+		),
+
+	url('../Images/architecture-castle-clouds-731230.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: white;
+
+}
+
+.JoinGuild:hover {
+	background:
+	linear-gradient(
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+		),
+
+	url('../Images/architecture-castle-clouds-731230.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: black;
+
+}
+
+.CreateGuild {
+	background:
+	linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+		),
+
+	url('../Images/architecture-blue-build-162557.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: white;
+
+}
+
+.CreateGuild:hover {
+	background:
+	linear-gradient(
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+		),
+
+	url('../Images/architecture-blue-build-162557.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: black;
+
+}
+
+.LeaveGuild {
+	background:
+	linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+		),
+
+	url('../Images/ancient-arch-architecture-210441.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: white;
+
+}
+
+.LeaveGuild:hover {
+	background:
+	linear-gradient(
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+		),
+
+	url('../Images/ancient-arch-architecture-210441.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: black;
+
+}
+
+.UpdateProfileGuild {
+	background:
+	linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+		),
+
+	url('../Images/abstract-abstract-painting-art-1193743.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: white;
+
+}
+
+.UpdateProfileGuild:hover {
+	background:
+	linear-gradient(
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+		),
+
+	url('../Images/abstract-abstract-painting-art-1193743.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: black;
+
+}
+
+.KickGuild {
+	background:
+	linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+		),
+
+	url('../Images/architecture-artillery-building-246982 .jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: white;
+
+}
+
+.KickGuild:hover {
+	background:
+
+	linear-gradient(
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+	),
+
+	url('../Images/architecture-artillery-building-246982 .jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: black;
+
+}
+
+.InviteGuild {
+	background:
+	linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+		),
+
+	url('../Images/adult-business-businessman-261599.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: white;
+
+}
+
+.InviteGuild:hover {
+	background:
+
+	linear-gradient(
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+	),
+
+	url('../Images/adult-business-businessman-261599.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: black;
+
+}
+
+.NukeGuild {
+	background:
+	linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)
+		),
+
+	url('../Images/atomic-bomb-beach-black-and-white-73909.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: white;
+
+}
+
+.NukeGuild:hover {
+	background:
+
+	linear-gradient(
+		rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.5)
+	),
+
+	url('../Images/atomic-bomb-beach-black-and-white-73909.jpg');
+
+
+	background-size: cover;
+	background-position: center;
+	height: 35em;
+
+	margin: 1em;
+	border-color: white;
+	border-style: solid;
+	border-width: 0.5em;
+	color: black;
+
+}

@@ -1,0 +1,41 @@
+{% extends "UserEntry/Base.html" %}
+
+{% load static %}
+
+{% block Head %}
+
+<link rel="shortcut icon" href="{% static 'UserEntry/Images/GuildLogoIcon.png' %}" type="image/png" />
+<link rel="stylesheet" type="text/css" href="{% static 'UserEntry/CSS/AccountVerificationNotificationSuccess.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<title>Guilds, the social network where groups connect!</title>
+
+{% endblock %}
+
+{% block Content %}
+
+<div class="row">
+
+  <div class="col l12 s12 m12">
+
+    <div class="card white" style="max-width: 30.25em; margin: auto; min-height: 20em; border-radius: 4px; padding-top: 3em; padding-bottom: 2em; padding-top: 2em; top: 4.5em; margin-bottom: 4.5em;">
+
+      <div class="card-content black-text" style="padding-top: 2em; padding-bottom: 2em; text-align: center;">
+
+        <span class="card-title" style="font-weight: bold; font-family: 'Noto Sans'; letter-spacing: 3px; font-size: 36px;">ACCOUNT VERIFIED</span>
+
+        <hr style="margin-top: 3em; margin-bottom: 2em;"/>
+
+        <p style="color: black; margin: auto; font-size: 18px; font-family: 'Noto Sans';">Your account is now verified</p>
+
+        <p style="color: #A3A3A3; margin: auto; font-size: 18px; font-family: 'Noto Sans'; top: 2em; position: relative;">You can now <a href="{% url 'UserEntry:Login' %}" style="color: #FF7723; letter-spacing: 1px;">login</a></p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

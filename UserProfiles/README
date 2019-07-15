@@ -1,0 +1,15 @@
+This app handles:
+	- User profile update page:
+		- View for user profile update page
+		- User profile model
+		- User profile creation
+		- User profile updating
+
+	- User profile page: 
+		- View for user profile page
+		- User profile model
+		- The list of posts (Not the posts model, rather the page with the timeline of user posts)
+		- User profile URLS
+
+IT HANDLES NOTHING ELSE.
+

@@ -1,0 +1,10 @@
+#GuildErrorContainer {
+  min-width: 18rem;
+
+}
+
+body {
+  background: url('../../GuildCreation/Images/GuildJoinError.jpg') no-repeat center fixed;
+  background-size: cover;
+
+}

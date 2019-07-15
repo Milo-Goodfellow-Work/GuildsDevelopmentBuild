@@ -1,0 +1,65 @@
+{% extends "UserSettings/Base.html" %}
+{% load static %}
+
+
+{% block Head %}
+<link rel="stylesheet" type="text/css" href="{% static 'GuildProfiles/CSS/GuildProfile.css' %}" />
+<title>Your settings!</title>
+{% endblock %}
+
+{% block Content %}
+<div class="container mx-auto text-center" style="width: 100%; background-color: white; margin-bottom: 1rem; border: grey solid 0.05rem; border-radius: 0.3rem; margin-top: 7rem; min-width: 18rem;">
+
+  <div class="container" style="margin-top: 1rem;">
+    <h1>Settings</h1> <p style="color: grey;">All the tools you need to get started</p>
+  </div>
+
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Update your profile</h5>
+      <p class="card-text">Update your personal profile. Go here if you want to change your profile bio, link, image, or header!</p>
+      <a href="{% url 'UserProfiles:UpdateProfile' %}" class="btn btn-default" style="border-color: #0099cc;">Jump</a>
+    </div>
+  </div>
+
+  {% if  UserGuild != None %}
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h5 class="card-title">Update your guild profile</h5>
+      <p class="card-text">Update your guilds profile. Go here if you want to change your guilds profile bio, link, image, or header!</p>
+      <a href="{% url 'GuildProfiles:UpdateGuildProfile' %}" class="btn btn-default" style="border-color: #0099cc;">Jump</a>
+    </div>
+  </div>
+
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h5 class="card-title">Leave your current guild</h5>
+      <p class="card-text">Exit your current guild. Clicking this will remove you from your current guild.</p>
+      <a href="{% url 'GuildLaunch:LeaveGuild' %}" class="btn btn-default" style="border-color: red; color: red;">Jump</a>
+    </div>
+  </div>
+
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h5 class="card-title">Your guilds invite link</h5>
+      <p class="card-text">Use this link to invite new people to your guild.</p>
+      <a href="{% url 'GuildLaunch:JoinGuild' Key=UserGuildModelInvite %}">Copy my link address!</a>
+    </div>
+  </div>
+  {% else %}
+
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h5 class="card-title">Create a new guild!</h5>
+      <p class="card-text">Create a new guild and join it!</p>
+      <a href="{% url 'GuildLaunch:GuildCreate' %}" class="btn btn-default" style="border-color: #ff5623; color: #ff5623;">Jump</a>
+    </div>
+  </div>
+
+  {% endif %}
+
+</div>
+
+
+{% endblock %}

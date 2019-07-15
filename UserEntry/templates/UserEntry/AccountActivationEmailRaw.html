@@ -1,0 +1,8 @@
+<!--This is the raw text version of the email sent to validate user accounts-->
+<!--This is present in case the styled email does not function as intended-->
+
+{% autoescape off %}
+Hi {{ user.username }}
+This is the last step to register on Guilds Social!
+http://{{ domain }}{% url 'UserEntry:Activate' uidb64=uid token=token %}
+{% endautoescape %}

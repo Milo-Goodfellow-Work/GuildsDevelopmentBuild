@@ -1,0 +1,66 @@
+.DropDownButtonCentered {
+  margin-top: 0.4rem;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  /* Dear next webdev: sorry about this */
+  -webkit-transform: translate(-15%, 0);
+  -o-transform: translate(-15%, 0);
+  transform: translate(-13.5%, 0);
+
+}
+
+.DropDownMenuCentered {
+  right: auto;
+  left: 50%;
+  /* Sorry about this also */
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-44.5%, 0);
+
+}
+
+
+.InvisibleButton {
+  background-color: white;
+  border: none;
+
+}
+
+.DropDownBlock1 {
+  width:3rem;
+  height: 0.5rem;
+  background-color: black;
+  border-radius: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+
+}
+
+.DropDownBlock2 {
+  width:3rem;
+  height: 0.5rem;
+  background-color: black;
+  border-radius: 1rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: SlideIn 0.3s forwards;
+  animation: SlideIn 0.3s forwards;
+
+}
+
+.DropDownBlock1:hover {
+  background-color: red;
+
+}
+
+.DropDownBlock2:hover {
+  background-color: red;
+
+}
+
+@keyframes SlideIn {
+  from {margin-top: 0rem;}
+  to {margin-top: 0.4rem;}
+
+}

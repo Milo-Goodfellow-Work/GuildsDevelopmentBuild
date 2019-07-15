@@ -1,0 +1,122 @@
+{% extends "GroupPage/Base.html" %}
+{% load static %}
+
+{% block Head %}
+<link rel="stylesheet" type="text/css" href="{% static 'GroupPage/CSS/Group.css' %}" />
+<title>Group!</title>
+{% endblock %}
+
+{% block Content %}
+<div class="container">
+
+
+  <h1 style="margin: auto; position: relative; top: 0.5em;">Guild</h1>
+
+  <div class="row" style="top: 3em; position: relative;">
+
+    <div class="col l4 m4 s12">
+      <div class="card JoinGuild">
+        <div class="card-title">
+          <h1 style="font-family: 'Noto Sans'; font-size: 36px;">Join a guild</h1>
+        </div>
+
+        <div class="card-content">
+          <p style="font-family: 'Noto Sans'; font-size: 24px;">
+            Leave your current guild and join a new one
+          </p>
+        </div>
+
+      </div>
+
+      <div class="card UpdateProfileGuild">
+        <div class="card-title">
+          <h1 style="font-family: 'Noto Sans'; font-size: 36px;">Update your guild profile</h1>
+        </div>
+
+        <div class="card-content">
+          <p style="font-family: 'Noto Sans'; font-size: 24px;">
+            Change your guilds public facing appearance
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col l4 m4 s12" style="">
+      <a href="{% url 'GuildLaunch:GuildCreate' %}">
+        <div class="card CreateGuild">
+          <div class="card-title">
+            <h1 style="font-family: 'Noto Sans'; font-size: 36px;">Create a guild</h1>
+          </div>
+
+          <div class="card-content">
+            <p style="font-family: 'Noto Sans'; font-size: 24px;">
+              Leave your current guild and create a new one
+            </p>
+          </div>
+
+        </div>
+      </a>
+
+      <div class="card KickGuild">
+        <div class="card-title">
+          <h1 style="font-family: 'Noto Sans';  font-size: 36px;">Vote to kick</h1>
+        </div>
+
+        <div class="card-content">
+          <p style="font-family: 'Noto Sans';  font-size: 24px;">
+            Call a vote to kick another member of your guild
+          </p>
+        </div>
+
+      </div>
+
+      <div class="card NukeGuild">
+        <div class="card-title">
+          <h1 style="font-family: 'Noto Sans';  font-size: 36px;">Vote to shut down your guild</h1>
+        </div>
+
+        <div class="card-content">
+          <p style="font-family: 'Noto Sans';  font-size: 24px;">
+            Call a vote to close your guild permanently
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col l4 m4 s12" style="">
+      <div class="card LeaveGuild">
+        <div class="card-title">
+          <h1 style="font-family: 'Noto Sans'; font-size: 36px;">Leave your guild</h1>
+        </div>
+
+        <div class="card-content">
+          <p style="font-family: 'Noto Sans'; font-size: 24px;">
+            Leave your current guild and do nothing
+          </p>
+        </div>
+
+      </div>
+
+      <div class="card InviteGuild">
+        <div class="card-title">
+          <h1 style="font-family: 'Noto Sans'; font-size: 36px;">Get your guild invite link</h1>
+        </div>
+
+        <div class="card-content">
+          <p style="font-family: 'Noto Sans';  font-size: 24px;">
+            Get your guilds invite link to add new members
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+
+{% block Head %}
+
+<link rel="shortcut icon" href="{% static 'ErrorTemplates/static/images/GuildLogoIcon.png' %}" type="image/png" />
+<link rel="stylesheet" type="text/css" href="{% static 'ErrorTemplates/static/CSS/Error404.css' %}" />
+<title>Page not found!</title>
+
+{% endblock %}
+
+{% block Content %}
+
+<div class="card w-25 mx-auto m-5" id="ErrorContainer">
+  <div class="card-body text-center">
+      <h1>Error 404</h1>
+      <hr />
+      <h2>You have entered uncharted territory</h2>
+      <hr>
+      <h4 style="color: grey">Turn back!</h4>
+
+      <a href="#" class="btn btn-success m-3">Home</a> <br>
+
+  </div>
+</div>
+
+{% endblock %}

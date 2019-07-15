@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+     <!-- Meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+     <!-- Link tags -->
+     <link rel="stylesheet" type="text/css" href="{% static 'Home/CSS/Base.css' %}" />
+     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+     <link rel="shortcut icon" href="{% static 'Home/Images/GuildLogoIcon.png' %}" type="image/png" />
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+     <!-- Icons -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+     <!-- Head block to allow for the addition of CSS, title, etc -->
+     {% block Head %}
+     {% endblock %}
+
+   </head>
+
+   <body style="text-align: center;">
+
+     <div class="navbar-fixed">
+
+     <nav style="color: black;">
+             <div class="nav-wrapper" style="background-color: white;">
+           <!--The "vertical logo center" class over rules the "brand-logo" class so that "position: relative;" and not "position: absolute;"-->
+
+           <ul id="nav-mobile" class="left" style="color: black;">
+
+             <li><a href="{% url 'Home:Feed' %}" style="color: black; font-family: 'Noto Sans';"><i class="material-icons left">arrow_back</i>Home</a></li>
+
+           </ul>
+
+      </div>
+
+      </nav>
+
+      </div>
+
+
+     {% block Content %}
+     {% endblock %}
+
+   </body>
+
+</html>

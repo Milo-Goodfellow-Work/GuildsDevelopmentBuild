@@ -1,0 +1,71 @@
+#RegisterContainer {
+  min-width: 18rem;
+
+}
+
+#id_username {
+  border-radius: 4px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  max-width: 26em;
+  margin: auto;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Noto Sans';
+  margin-bottom: 1.7em;
+
+}
+
+#id_password {
+  border-radius: 4px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  max-width: 26em;
+  margin: auto;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: 'Noto Sans';
+
+}
+
+.error {
+  min-height: 3em;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #FF6F6F;
+  color: white;
+  margin-top: 1.7em;
+  font-family: 'Noto Sans';
+  text-align: center;
+  padding: 0.7em;
+
+}
+
+input {
+  background-color: #f7f7f7;
+  border: 0.1rem solid #e8e8e8;
+  border-radius: 0.1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+
+}
+
+input:focus {
+    border: 0.1rem solid #cccccc;
+
+}
+
+body {
+    background: url('../Images/Login.jpg')no-repeat center fixed;
+    background-size: cover;
+
+}

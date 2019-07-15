@@ -1,0 +1,48 @@
+{% extends "GroupChat/Base.html" %}
+{% load static %}
+
+{% block Head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'GroupChat/CSS/GroupChat.css' %}" />
+
+{% endblock %}
+
+{% block Content %}
+
+<div class="container MessageContainer">
+
+  {% for i in MessageList %}
+  <div class="card mx-auto m-3" style="background-color: #f1f1f1;">
+    <div class="card-body">
+      <div style="float: left;">
+      <img class="ProfileImg" img="{{i.ProfId.UserProfileImage}}"/>
+      </div>
+      <div>
+      <h3 style="left: 0.5rem; position: relative;">{{ i.UserId.username }}</h3>
+      </div>
+      <p class="card-text">{{ i.MessageBody }}</p>
+    </div>
+  </div>
+  {% endfor %}
+
+<hr />
+<div class="mx-auto container ContainerMessage">
+
+<form method="post">
+  {% csrf_token %}
+  <div class="form-group text-center">
+    {% for field in form %}
+    <p>
+      <b>{{ field.label_tag }}</b><br>
+      {{ field }}
+    </p>
+    {% endfor %}
+    <input type="submit" style="visibility: hidden;"></input>
+  </div>
+</form>
+</div>
+</div>
+
+
+
+{% endblock %}

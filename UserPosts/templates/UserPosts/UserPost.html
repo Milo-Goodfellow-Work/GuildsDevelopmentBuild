@@ -1,0 +1,63 @@
+{% extends "UserPosts/Base.html" %}
+
+{% load static %}
+
+{% block Head %}
+
+<link rel="shortcut icon" href="{% static 'UserPosts/Images/GuildLogoIcon.png' %}" type="image/png" />
+<link rel="stylesheet" type="text/css" href="{% static 'UserPosts/CSS/UserPost.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<title>Post a new diary entry!</title>
+
+{% endblock %}
+
+{% block Content %}
+
+<div class="row">
+
+  <div class="col l12 s12 m12">
+
+    <div class="card white" style="max-width: 30.25em; margin: auto; min-height: 35em; border-radius: 4px; padding-top: 3em; padding-bottom: 2em; padding-top: 2em; top: 4.5em; margin-bottom: 4.5em;">
+
+      <div class="card-content black-text" style="padding-top: 2em; padding-bottom: 2em; text-align: center;">
+
+        <span class="card-title" style="font-weight: bold; font-family: 'Noto Sans'; letter-spacing: 3px; font-size: 36px; bottom: 3px; font-weight: bold; color: #FF7723">DIARY</span>
+        <h4 style="font-weight: bold; font-family: 'Noto Sans'; letter-spacing: 3px; font-size: 24px; bottom: 3px; color: black;">A log for yourself and friends</h4>
+
+        <form method="post" style="margin-top: 42px;">
+          {% csrf_token %}
+          <div class="form-group">
+            {% for field in form %}
+            <p>
+              {{ field }}
+            </p>
+            {% endfor %}
+          </div>
+
+          {% for field in form %}
+
+            {% for error in field.errors %}
+
+              <div class="error" role="alert">
+                {{ error }}
+              </div>
+
+            {% endfor %}
+
+          {% endfor %}
+
+
+          <button type="submit" class="waves-effect waves-light btn" style="background-color: #FF7723; font-weight: bold; font-family: 'Noto Sans'; letter-spacing: 1px; float: right; top: 1.7em; margin: auto;">CREATE</button> <br>
+
+        </form>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+#VerificationContainer {
+  min-width: 18rem;
+
+}
+
+input {
+  background-color: #f7f7f7;
+  border: 0.1rem solid #e8e8e8;
+  border-radius: 0.1rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+
+}
+
+input:focus {
+    border: 0.1rem solid #cccccc;
+}
+
+body {
+    background: url('../Images/VerificationSuccess.jpg') no-repeat center fixed;
+    background-size: cover;
+
+}

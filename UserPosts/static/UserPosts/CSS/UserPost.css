@@ -1,0 +1,22 @@
+#UserPostContainer {
+  min-width: 18rem;
+  overflow: hidden;
+
+}
+
+#id_PostBody {
+  max-width: 26rem;
+  height: 15rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+  border: 0.1rem solid black;
+  border-radius: 4px;
+  resize: none;
+
+}
+
+body {
+  background-color: #F1F1F1;
+
+}

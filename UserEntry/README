@@ -1,0 +1,16 @@
+This app handles:
+	- User Registration:
+		- Enter a username
+		- Enter an email
+		- Enter a password
+		- Retype your password
+		- Join
+		- Conformation email
+		- User Conformation page
+
+	- User Login:
+		- Enter your Username
+		- Enter your password
+
+
+IT HANDLES NOTHING ELSE.
