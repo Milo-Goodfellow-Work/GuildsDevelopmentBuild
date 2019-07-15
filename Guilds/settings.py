@@ -152,8 +152,13 @@ STATICFILES_DIRS = (
 )
 
 #Email Configuration
+'''
+This email has been left blank.
+If you wish to create your own host of guilds with email services
+you'll need to setup a new email. 
+'''
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'number1trillion@gmail.com'
-EMAIL_HOST_PASSWORD = '99Milo99'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
